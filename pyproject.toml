@@ -8,7 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.7"
 apscheduler = "^3.6.3"
-nonebot2 = "^2.0.0-alpha.6"
+nonebot2 = "^2.0.0-alpha.7"
 
 [tool.poetry.dev-dependencies]
 yapf = "^0.30.0"

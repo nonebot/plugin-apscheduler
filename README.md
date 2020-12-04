@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# nonebot-plugin-docs
+# NoneBot Plugin APScheduler
 
 _✨ NoneBot APScheduler 定时任务插件 ✨_
 
@@ -37,3 +37,19 @@ scheduler.add_job(run_every_day_from_program_start, "interval", days=1, id="xxx"
 ```
 
 ## 配置项
+
+### apscheduler_autostart
+
+是否自动启动 `scheduler`
+
+### apscheduler_config
+
+`apscheduler` 的相关配置。参考 [配置 scheduler](https://apscheduler.readthedocs.io/en/latest/userguide.html#scheduler-config), [配置参数](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/base.html#apscheduler.schedulers.base.BaseScheduler)
+
+配置需要包含 `prefix: apscheduler.`
+
+默认配置：
+
+```json
+{ "apscheduler.timezone": "Asia/Shanghai" }
+```
