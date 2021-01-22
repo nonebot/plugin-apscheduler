@@ -1,14 +1,14 @@
 [tool.poetry]
 name = "nonebot-plugin-apscheduler"
-version = "0.1.0"
+version = "0.1.1"
 description = "APScheduler Support for NoneBot2"
 authors = ["yanyongyu <yanyongyu_1@126.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-apscheduler = "^3.6.3"
-nonebot2 = "^2.0.0-alpha.7"
+apscheduler = "^3.7.0"
+nonebot2 = "^2.0.0-alpha.8"
 
 [tool.poetry.dev-dependencies]
 yapf = "^0.30.0"
