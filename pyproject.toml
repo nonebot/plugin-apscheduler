@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-apscheduler"
-version = "0.1.1"
+version = "0.1.2"
 description = "APScheduler Support for NoneBot2"
 authors = ["yanyongyu <yanyongyu_1@126.com>"]
 license = "MIT"
