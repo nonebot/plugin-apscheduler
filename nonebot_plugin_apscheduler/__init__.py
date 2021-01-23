@@ -25,6 +25,6 @@ if plugin_config.apscheduler_autostart:
     driver.on_startup(_start_scheduler)
 
 aps_logger = logging.getLogger("apscheduler")
-aps_logger.setLevel(logging.DEBUG)
+aps_logger.setLevel(plugin_config.apscheduler_log_level)
 aps_logger.handlers.clear()
 aps_logger.addHandler(LoguruHandler())
