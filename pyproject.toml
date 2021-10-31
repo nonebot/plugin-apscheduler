@@ -6,17 +6,18 @@ authors = ["yanyongyu <yanyongyu_1@126.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.7.3"
 apscheduler = "^3.7.0"
 nonebot2 = "^2.0.0-alpha.8"
 
 [tool.poetry.dev-dependencies]
 yapf = "^0.30.0"
+nonebot2 = { path = "../nonebot2", develop = true }
 
-[[tool.poetry.source]]
-name = "aliyun"
-url = "https://mirrors.aliyun.com/pypi/simple/"
-default = true
+# [[tool.poetry.source]]
+# name = "aliyun"
+# url = "https://mirrors.aliyun.com/pypi/simple/"
+# default = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
