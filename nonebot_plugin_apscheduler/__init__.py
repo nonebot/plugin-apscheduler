@@ -21,8 +21,15 @@ async def _start_scheduler():
         logger.opt(colors=True).info("<y>Scheduler Started</y>")
 
 
+async def _shutdown_scheduler():
+    if scheduler.running:
+        scheduler.shutdown()
+        logger.opt(colors=True).info("<y>Scheduler Shutdown</y>")
+
+
 if plugin_config.apscheduler_autostart:
     driver.on_startup(_start_scheduler)
+    driver.on_shutdown(_shutdown_scheduler)
 
 aps_logger = logging.getLogger("apscheduler")
 aps_logger.setLevel(plugin_config.apscheduler_log_level)

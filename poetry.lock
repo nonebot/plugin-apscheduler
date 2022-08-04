@@ -241,7 +241,7 @@ colorama = {version = ">=0.3.4", markers = "sys_platform == \"win32\""}
 win32-setctime = {version = ">=1.0.0", markers = "sys_platform == \"win32\""}
 
 [package.extras]
-dev = ["colorama (>=0.3.4)", "docutils (==0.16)", "flake8 (>=3.7.7)", "tox (>=3.9.0)", "pytest (>=4.6.2)", "pytest-cov (>=2.7.1)", "black (>=19.10b0)", "isort (>=5.1.1)", "Sphinx (>=4.1.1)", "sphinx-autobuild (>=0.7.1)", "sphinx-rtd-theme (>=0.4.3)"]
+dev = ["sphinx-rtd-theme (>=0.4.3)", "sphinx-autobuild (>=0.7.1)", "Sphinx (>=4.1.1)", "isort (>=5.1.1)", "black (>=19.10b0)", "pytest-cov (>=2.7.1)", "pytest (>=4.6.2)", "tox (>=3.9.0)", "flake8 (>=3.7.7)", "docutils (==0.16)", "colorama (>=0.3.4)"]
 
 [[package]]
 name = "multidict"
@@ -269,7 +269,7 @@ python-versions = "*"
 
 [[package]]
 name = "nonebot2"
-version = "2.0.0-beta.3"
+version = "2.0.0-beta.4"
 description = "An asynchronous python bot framework."
 category = "main"
 optional = false
@@ -281,7 +281,7 @@ fastapi = "^0.78.0"
 loguru = "^0.6.0"
 pydantic = {version = "~1.9.0", extras = ["dotenv"]}
 pygtrie = "^2.4.1"
-tomlkit = "^0.10.0"
+tomlkit = ">=0.10.0,<1.0.0"
 typing-extensions = ">=3.10.0,<5.0.0"
 uvicorn = {version = "^0.17.0", extras = ["standard"]}
 yarl = "^1.7.2"
@@ -297,7 +297,29 @@ all = ["Quart (>=0.17.0,<0.18.0)", "aiohttp[speedups] (>=3.7.4,<4.0.0)", "httpx[
 type = "git"
 url = "https://github.com/nonebot/nonebot2.git"
 reference = "master"
-resolved_reference = "e38bb2b53017f0fd5a3d0f1a59a9cae9ed6a5bc8"
+resolved_reference = "48ccef2f064467fb07795177131ec6b377e3c7af"
+
+[[package]]
+name = "nonemoji"
+version = "0.1.2"
+description = "Simple gitmoji cli written in python"
+category = "dev"
+optional = false
+python-versions = ">=3.7.3,<4.0.0"
+
+[package.dependencies]
+noneprompt = ">=0.1.3,<0.2.0"
+
+[[package]]
+name = "noneprompt"
+version = "0.1.4"
+description = "Prompt toolkit for console interaction"
+category = "dev"
+optional = false
+python-versions = ">=3.7.3,<4.0.0"
+
+[package.dependencies]
+prompt-toolkit = ">=3.0.19,<4.0.0"
 
 [[package]]
 name = "pathspec"
@@ -335,6 +357,17 @@ nodeenv = ">=0.11.1"
 pyyaml = ">=5.1"
 toml = "*"
 virtualenv = ">=20.0.8"
+
+[[package]]
+name = "prompt-toolkit"
+version = "3.0.30"
+description = "Library for building powerful interactive command lines in Python"
+category = "dev"
+optional = false
+python-versions = ">=3.6.2"
+
+[package.dependencies]
+wcwidth = "*"
 
 [[package]]
 name = "pydantic"
@@ -563,6 +596,14 @@ python-versions = ">=3.7"
 anyio = ">=3.0.0,<4"
 
 [[package]]
+name = "wcwidth"
+version = "0.2.5"
+description = "Measures the displayed width of unicode strings in a terminal"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "websockets"
 version = "10.3"
 description = "An implementation of the WebSocket Protocol (RFC 6455 & 7692)"
@@ -579,7 +620,7 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
+dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 
 [[package]]
 name = "yarl"
@@ -609,7 +650,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.3"
-content-hash = "b442a656bbe7f0d8be5f9e9edb9d987d5e0f9b1041340e1d194e7f90c88ae582"
+content-hash = "659d1600c4c5b22494ef6d92e0b7702ab3303ffc0ac25285892611d09c1b8fcc"
 
 [metadata.files]
 anyio = [
@@ -821,6 +862,14 @@ nodeenv = [
     {file = "nodeenv-1.6.0.tar.gz", hash = "sha256:3ef13ff90291ba2a4a7a4ff9a979b63ffdd00a464dbe04acf0ea6471517a4c2b"},
 ]
 nonebot2 = []
+nonemoji = [
+    {file = "nonemoji-0.1.2-py3-none-any.whl", hash = "sha256:bb54ff9940e97fdbe530caf531ac5dd885f0b809757b02bbca0d7f1d0b50d1fe"},
+    {file = "nonemoji-0.1.2.tar.gz", hash = "sha256:f7b4101510bb8c6bbd25986962317fb30e5fb1f92adbc337b115154224c1b055"},
+]
+noneprompt = [
+    {file = "noneprompt-0.1.4-py3-none-any.whl", hash = "sha256:0c2c568e52067d9cf28bbc0b9b84cbcac02859a1de01e2b9ae5ce759a7eb1b21"},
+    {file = "noneprompt-0.1.4.tar.gz", hash = "sha256:de31010f992e2790ee6d8d4ad1bae0826bd1701ca9257356a716b8cc7b633028"},
+]
 pathspec = [
     {file = "pathspec-0.9.0-py2.py3-none-any.whl", hash = "sha256:7d15c4ddb0b5c802d161efc417ec1a2558ea2653c2e8ad9c19098201dc1c993a"},
     {file = "pathspec-0.9.0.tar.gz", hash = "sha256:e564499435a2673d586f6b2130bb5b95f04a3ba06f81b8f895b651a3c76aabb1"},
@@ -832,6 +881,10 @@ platformdirs = [
 pre-commit = [
     {file = "pre_commit-2.19.0-py2.py3-none-any.whl", hash = "sha256:10c62741aa5704faea2ad69cb550ca78082efe5697d6f04e5710c3c229afdd10"},
     {file = "pre_commit-2.19.0.tar.gz", hash = "sha256:4233a1e38621c87d9dda9808c6606d7e7ba0e087cd56d3fe03202a01d2919615"},
+]
+prompt-toolkit = [
+    {file = "prompt_toolkit-3.0.30-py3-none-any.whl", hash = "sha256:d8916d3f62a7b67ab353a952ce4ced6a1d2587dfe9ef8ebc30dd7c386751f289"},
+    {file = "prompt_toolkit-3.0.30.tar.gz", hash = "sha256:859b283c50bde45f5f97829f77a4674d1c1fcd88539364f1b28a37805cfd89c0"},
 ]
 pydantic = [
     {file = "pydantic-1.9.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:c8098a724c2784bf03e8070993f6d46aa2eeca031f8d8a048dff277703e6e193"},
@@ -1011,6 +1064,10 @@ virtualenv = [
 watchgod = [
     {file = "watchgod-0.8.2-py3-none-any.whl", hash = "sha256:2f3e8137d98f493ff58af54ea00f4d1433a6afe2ed08ab331a657df468c6bfce"},
     {file = "watchgod-0.8.2.tar.gz", hash = "sha256:cb11ff66657befba94d828e3b622d5fb76f22fbda1376f355f3e6e51e97d9450"},
+]
+wcwidth = [
+    {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},
+    {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},
 ]
 websockets = [
     {file = "websockets-10.3-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:661f641b44ed315556a2fa630239adfd77bd1b11cb0b9d96ed8ad90b0b1e4978"},
