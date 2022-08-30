@@ -10,9 +10,9 @@ repository = "https://github.com/nonebot/plugin-apscheduler"
 documentation = "https://github.com/nonebot/plugin-apscheduler#readme"
 
 [tool.poetry.dependencies]
-python = "^3.7.3"
+python = "^3.8"
 apscheduler = "^3.7.0"
-nonebot2 = "^2.0.0-alpha.8"
+nonebot2 = "^2.0.0-beta.5"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"

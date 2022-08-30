@@ -27,9 +27,11 @@ _✨ NoneBot APScheduler 定时任务插件 ✨_
 ```python
 from nonebot import require
 
-scheduler = require("nonebot_plugin_apscheduler").scheduler
+require("nonebot_plugin_apscheduler")
 
-@scheduler.scheduled_job("cron", hour="*/2", id="xxx", args=[1], kwargs={arg2: 2})
+from nonebot_plugin_apscheduler import scheduler
+
+@scheduler.scheduled_job("cron", hour="*/2", id="xxx", args=[1], kwargs={"arg2": 2})
 async def run_every_2_hour(arg1, arg2):
     pass
 
