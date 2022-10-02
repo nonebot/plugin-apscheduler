@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-apscheduler"
-version = "0.1.4"
+version = "0.2.0"
 description = "APScheduler Support for NoneBot2"
 authors = ["yanyongyu <yyy@nonebot.dev>"]
 license = "MIT"
@@ -12,9 +12,9 @@ documentation = "https://github.com/nonebot/plugin-apscheduler#readme"
 [tool.poetry.dependencies]
 python = "^3.8"
 apscheduler = "^3.7.0"
-nonebot2 = "^2.0.0-beta.5"
+nonebot2 = "^2.0.0-rc.1"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 isort = "^5.10.1"
 black = "^22.3.0"
 nonemoji = "^0.1.2"
